@@ -6,6 +6,7 @@ from selenium.webdriver import Chrome
 # from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import re
+import os
 
 
 def to_camel(string, capitalize):
@@ -28,7 +29,7 @@ class FlatUiColorsParser:
     """
 
     @classmethod
-    def exec(cls, url):
+    def exec(cls, url, code):
         """
         Executes.
 
@@ -50,6 +51,9 @@ class FlatUiColorsParser:
         time.sleep(4)
 
         html = driver.page_source
+
+        driver.quit()
+
         soup = BeautifulSoup(html, 'html.parser')
 
         # print(soup.prettify())
@@ -58,11 +62,11 @@ class FlatUiColorsParser:
         elements = soup.select(".author")
         for element in elements:
             author = element.text.replace("\n", "").strip()
-            print("    /// " + author)
+            code += f"    /// {author}\n"
 
         class_name = url.rsplit('/', 1)[-1]
-        print("    /// " + url)
-        print("    public struct " + class_name + " {")
+        code += f"    /// {url}\n"
+        code += f"    public struct {class_name} {{\n"
 
         color_names = []
         elements = soup.select(".color")
@@ -91,22 +95,22 @@ class FlatUiColorsParser:
             comps[1] = "green:" + comps[1]
             comps[2] = "blue:" + comps[2]
             color = ", ".join(comps)
-            print("        public static let " + color_name + " = " + color)
+            code += f"        public static let {color_name} = {color}\n"
 
-        print("")
-        print("        public static let palette = [")
+        code += "\n"
+        code += "        public static let palette = [\n"
+
         for color_name in color_names:
-            print("            Self." + color_name + ",")
-        print("        ]")
+            code += f"            Self.{color_name},\n"
+        code += "        ]\n"
+        code += "    }\n\n"  # end struct {class_name}
 
-        print("    }\n")  # end struct
-
-        driver.quit()
+        return code
 
 
 if __name__ == '__main__':
     # for Swift
-    print("""#if os(OSX)
+    swift_code = """#if os(OSX)
 import AppKit
 public typealias FUCColor = NSColor
 #elseif os(iOS)
@@ -117,15 +121,15 @@ public typealias FUCColor = UIColor
 /// Returns new color object.
 ///
 /// - Parameters:
-///   - red: A red is 0~255.0
-///   - green: A green is 0~255.0
-///   - blue: A blue is 0~255.0
+///   - red: A red. The range of its value is 0 to 255.
+///   - green: A green. The range of its value is 0 to 255.
+///   - blue: A blue. The range of its value is 0 to 255.
 /// - Returns: New color object.
 public func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> FUCColor {
     FUCColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1.0)
 }
 
-public struct FUCColors {""")
+public struct FlatUIColors {\n"""
 
     urls = [
         "https://flatuicolors.com/palette/defo",
@@ -144,6 +148,14 @@ public struct FUCColors {""")
         "https://flatuicolors.com/palette/tr"
     ]
     for url in urls:
-        FlatUiColorsParser.exec(url)
+        swift_code = FlatUiColorsParser.exec(url, swift_code)
 
-    print("}")  # end struct FUCColors
+    swift_code += "}\n"  # end struct FUCColors
+
+    # Make output directory if not exists.
+    DIST_DIR = "dist"
+    os.makedirs(DIST_DIR, exist_ok=True)
+
+    f = open(f"{DIST_DIR}/FlatUIColors.swift", "w", encoding="UTF-8")
+    f.write(swift_code)
+    f.close()

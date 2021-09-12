@@ -2,7 +2,7 @@
 
 ## Require
 
-- Python 3
+- Python 3.9+
 - Google Chrome
 - chromedriver
 
@@ -34,6 +34,8 @@ chromedriver --version
 
 ## Usage
 
+### Run scraping
+
 ```
-python app/main.py > Colors.swift
+python app/main.py
 ```
