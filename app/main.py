@@ -3,9 +3,10 @@
 import os
 from flat_ui_colors_parser import FlatUiColorsParser
 from writer.swift_writer import SwiftWriter
+from writer.ts_writer import TsWriter
 
 if __name__ == '__main__':
-    writers = [SwiftWriter()]
+    writers = [SwiftWriter(), TsWriter()]
 
     urls = [
         "https://flatuicolors.com/palette/defo",
