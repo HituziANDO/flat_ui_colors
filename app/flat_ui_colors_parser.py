@@ -47,7 +47,7 @@ class FlatUiColorsParser:
         # print(soup.prettify())
 
         # Extract the list name.
-        list_name = url.rsplit('/', 1)[-1]
+        list_name = to_camel(url.rsplit('/', 1)[-1], True)
 
         # Extract authors.
         authors = []
@@ -81,7 +81,7 @@ class FlatUiColorsParser:
                 .replace('ā', 'a') \
                 .replace('â', 'a')
 
-            # rgb(r,g,b)
+            # rgb(r, g, b)
             color = element.get("style").replace('background: ', '').replace(';', '').strip()
 
             colors.append((color_name, color))

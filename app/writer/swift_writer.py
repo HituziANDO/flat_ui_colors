@@ -4,6 +4,10 @@ import re
 
 
 class SwiftWriter:
+    """
+    Swift code writer.
+    """
+
     def __init__(self, indent="    "):
         self.__indent = indent
         self.__source_code = """#if os(OSX)
@@ -65,10 +69,10 @@ public struct FlatUIColors {\n"""
     def __add_color(self, color_name, color):
         """
         :param color_name: A color name.
-        :param color: rgb(r,g,b)
+        :param color: rgb(r, g, b)
         """
 
-        # rgb(r,g,b) -> rgb(red:, green:, blue:)
+        # rgb(r, g, b) -> rgb(red:, green:, blue:)
         comps = re.split(",", color.replace("rgb(", "rgb(red: "))
         comps[1] = "green:" + comps[1]
         comps[2] = "blue:" + comps[2]

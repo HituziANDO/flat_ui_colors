@@ -20,7 +20,7 @@ public func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> FUCColor {
 public struct FlatUIColors {
     /// Flat UI Palette v1 by Flat UI Colors
     /// https://flatuicolors.com/palette/defo
-    public struct defo {
+    public struct Defo {
         public static let turquoise = rgb(red: 26, green: 188, blue: 156)
         public static let emerald = rgb(red: 46, green: 204, blue: 113)
         public static let peterRiver = rgb(red: 52, green: 152, blue: 219)
@@ -68,7 +68,7 @@ public struct FlatUIColors {
 
     /// American Palette by Kevin Yang      from 🇺🇸
     /// https://flatuicolors.com/palette/us
-    public struct us {
+    public struct Us {
         public static let lightGreenishBlue = rgb(red: 85, green: 239, blue: 196)
         public static let fadedPoster = rgb(red: 129, green: 236, blue: 236)
         public static let greenDarnerTail = rgb(red: 116, green: 185, blue: 255)
@@ -116,7 +116,7 @@ public struct FlatUIColors {
 
     /// Aussie Palette by Kate Hoolahan      from 🇦🇺
     /// https://flatuicolors.com/palette/au
-    public struct au {
+    public struct Au {
         public static let beekeeper = rgb(red: 246, green: 229, blue: 141)
         public static let spicedNectarine = rgb(red: 255, green: 190, blue: 118)
         public static let pinkGlamour = rgb(red: 255, green: 121, blue: 121)
@@ -164,7 +164,7 @@ public struct FlatUIColors {
 
     /// British Palette by Jan Losert      from 🇬🇧
     /// https://flatuicolors.com/palette/gb
-    public struct gb {
+    public struct Gb {
         public static let protossPylon = rgb(red: 0, green: 168, blue: 255)
         public static let periwinkle = rgb(red: 156, green: 136, blue: 255)
         public static let riseNShine = rgb(red: 251, green: 197, blue: 49)
@@ -212,7 +212,7 @@ public struct FlatUIColors {
 
     /// Canadian Palette by Dmitri Litvinov      from 🇨🇦
     /// https://flatuicolors.com/palette/ca
-    public struct ca {
+    public struct Ca {
         public static let jigglypuff = rgb(red: 255, green: 159, blue: 243)
         public static let casandoraYellow = rgb(red: 254, green: 202, blue: 87)
         public static let pastelRed = rgb(red: 255, green: 107, blue: 107)
@@ -260,7 +260,7 @@ public struct FlatUIColors {
 
     /// Chinese Palette by Wenjun      from 🇨🇳
     /// https://flatuicolors.com/palette/cn
-    public struct cn {
+    public struct Cn {
         public static let goldenSand = rgb(red: 236, green: 204, blue: 104)
         public static let coral = rgb(red: 255, green: 127, blue: 80)
         public static let wildWatermelon = rgb(red: 255, green: 107, blue: 129)
@@ -308,7 +308,7 @@ public struct FlatUIColors {
 
     /// Dutch Palette by Jeroen Van Eerden      from 🇳🇱
     /// https://flatuicolors.com/palette/nl
-    public struct nl {
+    public struct Nl {
         public static let sunflower = rgb(red: 255, green: 195, blue: 18)
         public static let energos = rgb(red: 196, green: 229, blue: 56)
         public static let blueMartina = rgb(red: 18, green: 203, blue: 196)
@@ -356,7 +356,7 @@ public struct FlatUIColors {
 
     /// French Palette by Léa Poisson      from 🇫🇷
     /// https://flatuicolors.com/palette/fr
-    public struct fr {
+    public struct Fr {
         public static let flatFlesh = rgb(red: 250, green: 211, blue: 144)
         public static let melonMelody = rgb(red: 248, green: 194, blue: 145)
         public static let livid = rgb(red: 106, green: 137, blue: 204)
@@ -404,7 +404,7 @@ public struct FlatUIColors {
 
     /// German Palette by Martin David      from 🇩🇪
     /// https://flatuicolors.com/palette/de
-    public struct de {
+    public struct De {
         public static let fusionRed = rgb(red: 252, green: 92, blue: 101)
         public static let orangeHibiscus = rgb(red: 253, green: 150, blue: 68)
         public static let flirtatious = rgb(red: 254, green: 211, blue: 48)
@@ -452,7 +452,7 @@ public struct FlatUIColors {
 
     /// Indian Palette by Ranganath Krishnamani      from 🇮🇳
     /// https://flatuicolors.com/palette/in
-    public struct in {
+    public struct In {
         public static let orchidOrange = rgb(red: 254, green: 164, blue: 127)
         public static let spiroDiscoBall = rgb(red: 37, green: 204, blue: 247)
         public static let honeyGlow = rgb(red: 234, green: 181, blue: 67)
@@ -500,7 +500,7 @@ public struct FlatUIColors {
 
     /// Russian Palette by Alexander Zaytsev      from 🇷🇺
     /// https://flatuicolors.com/palette/ru
-    public struct ru {
+    public struct Ru {
         public static let creamyPeach = rgb(red: 243, green: 166, blue: 131)
         public static let rosyHighlight = rgb(red: 247, green: 215, blue: 148)
         public static let softBlue = rgb(red: 119, green: 139, blue: 235)
@@ -548,7 +548,7 @@ public struct FlatUIColors {
 
     /// Spanish Palette by Miguel Camacho      from 🇪🇸
     /// https://flatuicolors.com/palette/es
-    public struct es {
+    public struct Es {
         public static let jacksonsPurple = rgb(red: 64, green: 64, blue: 122)
         public static let c64Purple = rgb(red: 112, green: 111, blue: 211)
         public static let swanWhite = rgb(red: 247, green: 241, blue: 227)
@@ -596,7 +596,7 @@ public struct FlatUIColors {
 
     /// Swedish Palette by Jesper Dahlqvist      from 🇸🇪
     /// https://flatuicolors.com/palette/se
-    public struct se {
+    public struct Se {
         public static let highlighterPink = rgb(red: 239, green: 87, blue: 119)
         public static let darkPeriwinkle = rgb(red: 87, green: 95, blue: 207)
         public static let megaman = rgb(red: 75, green: 207, blue: 250)
@@ -644,7 +644,7 @@ public struct FlatUIColors {
 
     /// Turkish Palette by Tamer Köseli      from 🇹🇷
     /// https://flatuicolors.com/palette/tr
-    public struct tr {
+    public struct Tr {
         public static let brightLilac = rgb(red: 205, green: 132, blue: 241)
         public static let prettyPlease = rgb(red: 255, green: 204, blue: 204)
         public static let lightRed = rgb(red: 255, green: 77, blue: 77)
