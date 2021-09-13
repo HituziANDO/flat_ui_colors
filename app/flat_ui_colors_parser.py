@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 import re
 import time
 from bs4 import BeautifulSoup
@@ -23,6 +24,9 @@ class FlatUiColorsParser:
         :param writers: Writers.
         """
 
+        # Extract the list name.
+        list_name = to_camel(url.rsplit('/', 1)[-1], True)
+
         opts = webdriver.ChromeOptions()
         opts.add_argument("--headless")
         opts.add_argument("--no-sandbox")
@@ -40,14 +44,15 @@ class FlatUiColorsParser:
 
         html = driver.page_source
 
+        # Take a screenshot.
+        os.makedirs("tmp/screenshots", exist_ok=True)
+        driver.save_screenshot(f"tmp/screenshots/{list_name}.png")
+
         driver.quit()
 
         soup = BeautifulSoup(html, 'html.parser')
 
         # print(soup.prettify())
-
-        # Extract the list name.
-        list_name = to_camel(url.rsplit('/', 1)[-1], True)
 
         # Extract authors.
         authors = []
