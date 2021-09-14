@@ -59,6 +59,13 @@ const rgb = (r: number, g: number, b: number) => new FlatUIColor(r, g, b)\n\n"""
         return self.__source_code
 
     def add_color_list(self, url, authors, list_name, colors):
+        """
+        :param url: URL of the color list page.
+        :param authors: Authors.
+        :param list_name: The color list name.
+        :param colors: (color_name, color)[]
+        """
+
         # Add comments
         self.__source_code += "/**\n"
         for author in authors:

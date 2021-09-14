@@ -12,7 +12,7 @@ from util.string_util import to_camel
 
 class FlatUiColorsParser:
     """
-    This class scrapes https://flatuicolors.com/ and parses the html to create color objects in Swift and TypeScript.
+    This class scrapes https://flatuicolors.com/ and parses the html to create color objects in Swift, TypeScript, and SCSS.
     """
 
     @classmethod

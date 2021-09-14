@@ -2,11 +2,12 @@
 
 import os
 from flat_ui_colors_parser import FlatUiColorsParser
+from writer.scss_writer import ScssWriter
 from writer.swift_writer import SwiftWriter
 from writer.ts_writer import TsWriter
 
 if __name__ == '__main__':
-    writers = [SwiftWriter(), TsWriter()]
+    writers = [SwiftWriter(), TsWriter(), ScssWriter()]
 
     urls = [
         "https://flatuicolors.com/palette/defo",

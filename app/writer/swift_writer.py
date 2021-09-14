@@ -38,6 +38,13 @@ public struct FlatUIColors {\n"""
         return self.__source_code
 
     def add_color_list(self, url, authors, list_name, colors):
+        """
+        :param url: URL of the color list page.
+        :param authors: Authors.
+        :param list_name: The color list name.
+        :param colors: (color_name, color)[]
+        """
+
         # Add comments
         for author in authors:
             self.__source_code += f"{self.__indent}/// {author}\n"
