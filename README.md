@@ -1,5 +1,15 @@
 # flat_ui_colors
 
+This python script does scraping [Flat UI Colors website](https://flatuicolors.com/) and outputs the result as the source code files of some programming languages.
+
+## Outputs of Scraping
+
+Outputs of scraping are [here](https://github.com/HituziANDO/flat_ui_colors/tree/main/dist).
+
+- [SCSS](https://github.com/HituziANDO/flat_ui_colors/blob/main/dist/flat_ui_colors.scss)
+- [Swift](https://github.com/HituziANDO/flat_ui_colors/blob/main/dist/FlatUIColors.swift)
+- [TypeScript](https://github.com/HituziANDO/flat_ui_colors/blob/main/dist/FlatUIColors.ts)
+
 ## Require
 
 - Python 3.9+
