@@ -17,6 +17,14 @@ Outputs of scraping are [here](https://github.com/HituziANDO/flat_ui_colors/tree
 - Google Chrome
 - chromedriver
 
+I tested in the following environment.
+
+- macOS 10.15.7
+- Python 3.9.7
+- Google Chrome 93.0.4577.63
+- chromedriver 93.0.4577.63
+- selenium 3.141.0
+
 ## Setup
 
 ### Install packages
