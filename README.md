@@ -101,7 +101,10 @@ console.log(color3)  // -> "rgb(205, 132, 241)"
 
 For example
 
+##### iOS
+
 ```swift
+// FlatUIColors returns UIColor object.
 let color: UIColor = FlatUIColors.Gb.protossPylon
 var red: CGFloat = 0
 var green: CGFloat = 0
@@ -110,4 +113,11 @@ var alpha: CGFloat = 0
 color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 print("r:\(red * 255), g:\(green * 255), b:\(blue * 255), a:\(alpha)")
 // -> r:0.0, g:168.0, b:255.0, a:1.0
+```
+
+##### macOS
+
+```swift
+// FlatUIColors returns NSColor object.
+let color: NSColor = FlatUIColors.Gb.protossPylon
 ```
