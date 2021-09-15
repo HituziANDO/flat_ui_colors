@@ -1,6 +1,6 @@
 # flat_ui_colors
 
-This python script does scraping [Flat UI Colors website](https://flatuicolors.com/) and outputs the result as the source code files of some programming languages.
+This python script does scraping [Flat UI Colors website](https://flatuicolors.com/) and outputs the result as the source code files of the flat ui colors in some programming languages.
 
 ## Outputs of Scraping
 

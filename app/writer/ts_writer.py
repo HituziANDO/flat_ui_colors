@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import re
-
-
 class TsWriter:
     """
     TypeScript code writer.
@@ -13,18 +10,15 @@ class TsWriter:
         self.__indent = indent
         self.__source_code = """export class FlatUIColor {
     /**
-     * Red
-     * 0-255
+     * Red. The range of its value is 0 to 255.
      */
     readonly red: number
     /**
-     * Green
-     * 0-255
+     * Green. The range of its value is 0 to 255.
      */
     readonly green: number
     /**
-     * Blue
-     * 0-255
+     * Blue. The range of its value is 0 to 255.
      */
     readonly blue: number
 
@@ -43,7 +37,7 @@ class TsWriter:
 
     /**
      * Returns rgba(r, g, b, a).
-     * @param alpha 0-1.0
+     * @param alpha Alpha. The range of its value is 0 to 255.
      */
     rgbaAsCSS(alpha: number): string {
         return `rgba(${this.red}, ${this.green}, ${this.blue}, ${alpha})`
