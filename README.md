@@ -6,6 +6,7 @@ This python script does scraping [Flat UI Colors website](https://flatuicolors.c
 
 Outputs of scraping are [here](https://github.com/HituziANDO/flat_ui_colors/tree/main/dist).
 
+- [JavaScript](https://github.com/HituziANDO/flat_ui_colors/blob/main/dist/flat_ui_colors.js)
 - [SCSS](https://github.com/HituziANDO/flat_ui_colors/blob/main/dist/flat_ui_colors.scss)
 - [Swift](https://github.com/HituziANDO/flat_ui_colors/blob/main/dist/FlatUIColors.swift)
 - [TypeScript](https://github.com/HituziANDO/flat_ui_colors/blob/main/dist/FlatUIColors.ts)
@@ -54,6 +55,23 @@ python app/main.py
 
 Scraping results output into [dist](https://github.com/HituziANDO/flat_ui_colors/tree/main/dist) directory as FlatUIColors source files. Copy the file of programming language using by your project into the project.
 
+#### JavaScript
+
+For example
+
+```javascript
+import FlatUIColors from "path/to/FlatUIColors"
+
+const color1 = FlatUIColors.Gb.protossPylon.rgbAsCSS()
+console.log(color1)  // -> "rgb(0, 168, 255)"
+
+const color2 = FlatUIColors.Gb.downloadProgress.rgbaAsCSS(0.5)
+console.log(color2)  // -> "rgba(76, 209, 55, 0.5)"
+
+const color3 = FlatUIColors.Tr.palette[0].rgbAsCSS()
+console.log(color3)  // -> "rgb(205, 132, 241)"
+```
+
 #### TypeScript
 
 For example
@@ -67,6 +85,6 @@ console.log(color1)  // -> "rgb(0, 168, 255)"
 const color2 = FlatUIColors.Gb.downloadProgress.rgbaAsCSS(0.5)
 console.log(color2)  // -> "rgba(76, 209, 55, 0.5)"
 
-const color3 = FlatUIColors.Tr.palette[ 0 ].rgbAsCSS()
+const color3 = FlatUIColors.Tr.palette[0].rgbAsCSS()
 console.log(color3)  // -> "rgb(205, 132, 241)"
 ```
