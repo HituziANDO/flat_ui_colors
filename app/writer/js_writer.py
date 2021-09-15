@@ -49,7 +49,7 @@ const rgb = (r, g, b) => new FlatUIColor(r, g, b);\n\n"""
         :param url: URL of the color list page.
         :param authors: Authors.
         :param list_name: The color list name.
-        :param colors: (color_name, color)[]
+        :param colors: (color_name, color)[]. color_name: A color name. color: 'rgb(r, g, b)'
         """
 
         # Add comments
