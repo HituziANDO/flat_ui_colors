@@ -96,3 +96,18 @@ console.log(color2)  // -> "rgba(76, 209, 55, 0.5)"
 const color3 = FlatUIColors.Tr.palette[0].rgbAsCSS()
 console.log(color3)  // -> "rgb(205, 132, 241)"
 ```
+
+#### Swift
+
+For example
+
+```swift
+let color: UIColor = FlatUIColors.Gb.protossPylon
+var red: CGFloat = 0
+var green: CGFloat = 0
+var blue: CGFloat = 0
+var alpha: CGFloat = 0
+color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+print("r:\(red * 255), g:\(green * 255), b:\(blue * 255), a:\(alpha)")
+// -> r:0.0, g:168.0, b:255.0, a:1.0
+```
